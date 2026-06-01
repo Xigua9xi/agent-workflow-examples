@@ -1,0 +1,25 @@
+{
+  "name": "agent-workflow-examples",
+  "version": "0.1.0",
+  "description": "Small mock-provider examples for plan-execute-verify agent workflows.",
+  "type": "module",
+  "bin": {
+    "agent-workflow-demo": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm.cmd run build && node --test test/*.test.mjs",
+    "lint": "node scripts/lint.mjs",
+    "demo": "npm.cmd run build && node dist/cli.js \"summarize release notes\""
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
